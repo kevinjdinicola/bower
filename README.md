@@ -1,4 +1,21 @@
-# Bower
+# hg+Bower
+
+> Mercurial Support
+
+This forked version of bower has experimental Mercurial support.  It should function just like a remote git repo.
+
+## Hg Usage
+
+```bower install hg+http://example.com/your-hg-repo
+```
+
+or if you wish to specify a version/tag/branch
+
+```bower install hg+http://example.com/your-hg-repo#versionTagOrBranch
+```
+
+Note: In order to check the remote Hg repository for new versions, the entire remote hg repo will be cloned.  This means that doing a bower update WILL clone the entire remote hg repo in order to check if there is a new version available.  This may be slow, so use it if you wish.  I haven't found a way around this because Hg does not provide a way to determine the tags/branches available on a remote repository like git does.
+
 
 [![Build Status](https://travis-ci.org/bower/bower.svg?branch=master)](https://travis-ci.org/bower/bower) [![Coverage Status](https://coveralls.io/repos/bower/bower/badge.png?branch=feature%2Fintegration)](https://coveralls.io/r/bower/bower?branch=feature%2Fintegration)
 
